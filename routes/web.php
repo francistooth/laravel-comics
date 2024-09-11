@@ -26,3 +26,9 @@ Route::get('/chi-siamo', function () {
 Route::get('/contatti', function () {
     return view('contacts');
 })->name('contacts');
+
+Route::get('/comics', function () {
+    $comics = config('comics');
+
+    return view('comics', compact('comics'));
+})->name('comics');
